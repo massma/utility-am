@@ -1,0 +1,4 @@
+* utility-am
+
+  Utility functions used by me (Adam Massmann) across many
+  projects. Mostly earth science related.
