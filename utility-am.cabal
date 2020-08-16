@@ -1,0 +1,85 @@
+cabal-version: 2.2
+
+-- This file has been generated from package.yaml by hpack version 0.31.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 89d7308f0645947da5e6550e4b5cba3f877143e13fce1b18107a13f01849c681
+
+name:           utility-am
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/massma/utility-am#readme>
+homepage:       https://github.com/massma/utility-am#readme
+bug-reports:    https://github.com/massma/utility-am/issues
+author:         Adam Massmann
+maintainer:     akm2203@columbia.edu
+copyright:      Copyright (c) 2020 Adam Massmann
+license:        (BSD-3-Clause OR Apache-2.0)
+build-type:     Simple
+extra-source-files:
+    README.org
+    LICENSE.org
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/massma/utility-am
+
+library
+  exposed-modules:
+      AMUtil
+      EarthScience
+      GnuplotHelpers
+  other-modules:
+      Paths_utility_am
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+    , containers
+    , dimensional
+    , geodetics
+    , gnuplot
+    , integration
+    , text
+    , time
+  default-language: Haskell2010
+
+executable utility-am-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_utility_am
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , containers
+    , dimensional
+    , geodetics
+    , gnuplot
+    , integration
+    , text
+    , time
+    , utility-am
+  default-language: Haskell2010
+
+test-suite utility-am-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_utility_am
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , containers
+    , dimensional
+    , geodetics
+    , gnuplot
+    , integration
+    , text
+    , time
+    , utility-am
+  default-language: Haskell2010
