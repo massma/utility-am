@@ -90,8 +90,8 @@ getHour t = DT.todHour (DT.timeToTimeOfDay (DT.utctDayTime t))
 getMinute :: (DT.UTCTime -> Int)
 getMinute t = DT.todMin (DT.timeToTimeOfDay (DT.utctDayTime t))
 
-getJulianDay :: DT.UTCTime -> Integer
-getJulianDay t = days + 1
+getJulianDay :: DT.UTCTime -> Int
+getJulianDay t = fromIntegral days + 1
   where
     days =
       DT.diffDays (DT.utctDay t) (DT.fromGregorian (fromIntegral (getYear t)) 1 1)
