@@ -1,4 +1,9 @@
 {-# LANGUAGE TupleSections #-}
+{-# OPTIONS_GHC -Wall #-}
+{-# OPTIONS_GHC -Wcompat #-}
+{-# OPTIONS_GHC -Wincomplete-record-updates #-}
+{-# OPTIONS_GHC -Wincomplete-uni-patterns #-}
+{-# OPTIONS_GHC -Wredundant-constraints #-}
 
 module AMUtil
   ( addMonths,
